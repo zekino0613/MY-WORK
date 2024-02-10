@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #2b2a27;
+}
+
+main {
+  font-size: 0.9rem;
+}
+img {
+  max-width: 100%;
+}
+
+li {
+    list-style: none;
+    }
+
+a {
+    text-decoration: none;
+    color: #2b2a27;
+}
+
+#header , .section {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+}
+
+.section .section-title {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+/* --mainvisual------------------------------- */
+
+#mainvisual {
+    padding-bottom: 100px;
+}
+
+#mainvisual img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+
+}
+/* --header----------------------------------- */
+#header  {
+  max-width: 960px;
+  height: 270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 4%;
+
+}
+
+#header .header-nav ul {
+  display: flex;
+}
+
+#header .header-nav li {
+  padding:10px 14px 10px  ;
+  font-size: 0.9rem;
+}
+
+#header .header-nav li a:hover {
+  opacity: 0.6;
+  color: aqua; 
+  text-shadow:2px 2px 2px #2b2a27;
+  /*↑ -------- */
+
+
+}
+
+#header .header-nav .icon {
+  width: 25px;
+}
+
+/* --about--------------------------------------- */
+
+#About {
+    padding: 60px;
+}
+
+#About li:first-child {
+  padding-bottom: 25px;
+}
+
+#About p {
+    padding-top: 25px;
+}
+
+/* --works------------------------------------- */
+#Works {
+  padding: 60px;
+}
+
+#Works .works-image {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:  center;
+    gap: 20px 20px;
+}
+
+#Works .image {
+    width:calc(90%/3);
+}
+
+
+/* --news--------------------------------------------- */
+#News {
+  padding: 60px;
+}
+
+#News .news-list {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     border-top:#b9b9b9 solid 1px;
+ }
+
+
+
+#News .news-list dt {
+    width: 20%;
+    border-bottom: #b9b9b9 solid 1px;
+    line-height: 3rem;
+}
+
+#News .news-list dd {
+  width: 80%;
+  border-bottom: #b9b9b9 solid 1px;
+  padding-right: 20px;
+  line-height: 3rem;  
+}
+
+/* --contact---------------------------------------- */
+/* formの作り方<inputタグtextareaタグの使い方
+email属性を付与することでmailアドレス用の記入欄を作成できる。 */
+#Contact {
+  padding: 60px;
+} 
+ 
+#Contact .form-list {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+#Contact .form-list dt { 
+  /* padding-right: 60px; */
+  width: 15%;
+}
+
+#Contact .form-list dd  input{
+  border: #b9b9b9 solid  1px;
+  width: 80%;
+  width: 660px;
+  height: 40px;
+  margin: 5px;
+}
+
+#Contact .form-list dd textarea {
+  border: #b9b9b9 solid  1px;
+  padding-top: 10px;
+  width: 80%;
+  width: 660px;
+  height: 150px;
+  margin: 5px;
+}
+
+#Contact .button {
+  background-color: #020101;
+  color: white;
+  width: 200px;
+  height: 60px;
+  margin-top: 30px;
+  display: block; /*ボタンはinlne要素なのでblock要素に*/
+  margin: 30px auto;  
+}
+
+#Contact .button:hover {
+  background-color: white;
+  color: #020101;
+  border: #020101 solid 2px;
+}
+/* --footer-------------------------------------- */
+
+#footer {
+  margin-top: 60px;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.5rem;
+  background-color: #2b2a27;
+  color: aliceblue;
+}
+
+/* --レスポンシブ----------------------------------------- */
+@media screen and (max-width:600px) {
+  #header {
+   flex-direction: column;
+   justify-content: flex-start;
+   height:auto;
+   padding-top: 20px;
+   padding-bottom: 0;
+  } 
+  
+  .header-nav {
+    margin-top: -15px;
+  } 
+
+   #mainvisual {
+    padding-bottom: 0;
+ }
+
+
+  #About {
+    padding: 2%;
+  }
+  #Works {
+    padding:0 4% 40px 4% ;
+    flex-direction: column;
+  }
+
+  #Works .works-image {
+  flex-direction: column;
+ }
+
+  #Works .image {
+  width:100%;
+ }
+  #News {
+    padding: 0 4%;
+  }
+  #News .news-list {
+    flex-direction: column;
+
+  } 
+ 
+ #News .news-list dt {
+  width: 100%;
+  border-bottom: none;
+  /* padding-bottom: 10px; */
+}
+
+#News .news-list dd {
+  width: 100%;
+  line-height: normal;
+}
+
+#Contact {
+    padding: 4%;
+  }
+
+#Contact .form-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+#Contact .form-list dt {
+margin-left: 4px;
+}
+
+#Contact .form-list dd  input{
+   width: 100%;
+}
+
+#Contact .form-list dd textarea {
+  width: 100%;
+ }
+
+}
